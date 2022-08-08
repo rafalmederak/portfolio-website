@@ -40,6 +40,20 @@ const GlobalStyle = createGlobalStyle`
         cursor: pointer;
     }
 
+    ::-webkit-scrollbar {
+    width: 6px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+    background:  ${({ theme }) => theme.color.gray200};
+    border-radius: 20px;
+    }
+
+    ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.color.gray100};
+    border-radius: 20px;
+    }
+
 `;
 
 export default GlobalStyle;
