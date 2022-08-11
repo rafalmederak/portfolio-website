@@ -1,10 +1,10 @@
 import Header from "@components/header/Header";
 import * as Styled from "./Projects.styles";
-import HeroImage from "@content/images/person-image.png";
 import Image from "next/image";
 import Link from "next/link";
+import { IPosts } from "./Projects.interfaces";
 
-const Projects = () => {
+const Projects = ({ posts }: IPosts) => {
   return (
     <Styled.Container>
       <Styled.SectionWrapper>
@@ -20,20 +20,22 @@ const Projects = () => {
         </p>
 
         <Styled.ProjectsContainer>
-          <Styled.ProjectWrapper>
-            <Styled.ImageWrapper>
-              <Image src={HeroImage} layout="fill" alt="portofolio-image" />
-            </Styled.ImageWrapper>
-            <Styled.ProjectsDescriptionWrapper>
-              <h2>Portfolio website</h2>
-              <p>
-                A portfolio website that provides professional information about
-                an individual or a company and presents a showcase of their
-                work.
-              </p>
-              <Link href={""}>More information</Link>
-            </Styled.ProjectsDescriptionWrapper>
-          </Styled.ProjectWrapper>
+          {posts.map((post) => (
+            <Styled.ProjectWrapper key={post.slug}>
+              <Styled.ImageWrapper>
+                <Image
+                  src={post.cover.url}
+                  layout="fill"
+                  alt="portofolio-image"
+                />
+              </Styled.ImageWrapper>
+              <Styled.ProjectsDescriptionWrapper>
+                <h2>{post.title}</h2>
+                <p>{post.shortDescription}</p>
+                <Link href={"/projects/" + post.slug}>More information</Link>
+              </Styled.ProjectsDescriptionWrapper>
+            </Styled.ProjectWrapper>
+          ))}
         </Styled.ProjectsContainer>
       </Styled.SectionWrapper>
     </Styled.Container>

@@ -7,14 +7,16 @@ import Projects from "@modules/projects/Projects";
 import { hygraphClient } from "src/common/hygraph/client";
 import { pageQuery } from "src/common/hygraph/queries";
 
-const Home = () => {
+import { IPosts } from "@modules/projects/Projects.interfaces";
+
+const Home = ({ posts }: IPosts) => {
   return (
     <Layout>
       <>
         <Hero />
         <About />
         <Skills />
-        <Projects />
+        <Projects posts={posts} />
       </>
     </Layout>
   );
