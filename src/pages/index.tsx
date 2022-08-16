@@ -3,6 +3,7 @@ import Hero from "@modules/hero/Hero";
 import About from "@modules/about/About";
 import Skills from "@modules/skills/Skills";
 import Projects from "@modules/projects/Projects";
+import Contact from "@modules/contact/Contact";
 
 import { hygraphClient } from "src/common/hygraph/client";
 import { pageQuery } from "src/common/hygraph/queries";
@@ -17,6 +18,7 @@ const Home = ({ posts }: IPosts) => {
         <About />
         <Skills />
         <Projects posts={posts} />
+        <Contact />
       </>
     </Layout>
   );
