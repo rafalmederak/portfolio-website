@@ -9,9 +9,11 @@ export interface IPost {
     html: string;
   };
   date: string;
-  gallery: {
-    url: string;
-  };
+  gallery: [
+    {
+      url: string;
+    }
+  ];
 }
 
 export interface IPosts {
