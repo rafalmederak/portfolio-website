@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 
 export const Container = styled.section`
   display: flex;
@@ -119,4 +120,57 @@ export const ContactMethodBox = styled.div`
     width: 2.4rem;
     height: 2.4rem;
   }
+`;
+
+export const ModalContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+`;
+
+export const SuccessMessage = styled.div`
+  width: 80%;
+  height: 60%;
+  padding: 2rem;
+  border: 1px solid ${({ theme }) => theme.color.gray200};
+  background: ${({ theme }) => theme.color.white};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  position: relative;
+  gap: 2rem;
+  p {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+  svg {
+    font-size: 6rem;
+    color: ${({ theme }) => theme.color.purple};
+  }
+
+  ${({ theme }) => theme.screens.xl} {
+    width: 40vw;
+    height: 50vh;
+  }
+`;
+
+export const CloseIcon = styled(HighlightOffIcon)`
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  font-size: 28px !important;
+`;
+
+export const FailureMessage = styled.p`
+  color: red;
 `;
