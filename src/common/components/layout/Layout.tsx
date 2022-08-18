@@ -2,6 +2,7 @@ import Nav from "@components/nav/Nav";
 import { IChildrenProps } from "./Layout.interfaces";
 import * as Styled from "./Layout.styles";
 import { useState } from "react";
+import Footer from "@components/footer/Footer";
 
 export default function Layout({ children }: IChildrenProps) {
   const [activeNav, setActiveNav] = useState(false);
@@ -18,7 +19,10 @@ export default function Layout({ children }: IChildrenProps) {
     <Styled.MainContainer activeNav={activeNav}>
       <Styled.OpenNavButton onClick={handleActiveNav} />
       <Nav activeNav={activeNav} handleActiveNav={handleActiveNav} />
-      <main onClick={closeNav}>{children}</main>
+      <Styled.MainWrapper>
+        <main onClick={closeNav}>{children}</main>
+        <Footer />
+      </Styled.MainWrapper>
     </Styled.MainContainer>
   );
 }
