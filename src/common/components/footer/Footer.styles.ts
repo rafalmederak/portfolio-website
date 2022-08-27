@@ -23,7 +23,7 @@ export const Container = styled.footer`
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   max-width: 116rem;
   width: 100%;
@@ -34,20 +34,9 @@ export const Wrapper = styled.div`
   span {
     color: ${({ theme }) => theme.color.gray800};
   }
-  a {
-    padding: 1.1rem 2.4rem;
-    text-align: center;
-    background: ${({ theme }) => theme.color.gray100};
-    border-radius: 1rem;
-    font-weight: ${({ theme }) => theme.fontWeight.medium};
-    margin-top: 3rem;
-  }
 
   ${({ theme }) => theme.screens.md} {
     flex-direction: row;
     align-items: center;
-    a {
-      margin-top: 0;
-    }
   }
 `;

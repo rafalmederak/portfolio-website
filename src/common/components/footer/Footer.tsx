@@ -1,4 +1,3 @@
-import Link from "next/link";
 import * as Styled from "./Footer.styles";
 
 const Footer = () => {
@@ -8,7 +7,6 @@ const Footer = () => {
         <p>
           Copyright © 2022 <span>Rafał Męderak</span>
         </p>
-        <Link href={"privacy-policy"}>Privacy Policy</Link>
       </Styled.Wrapper>
     </Styled.Container>
   );
