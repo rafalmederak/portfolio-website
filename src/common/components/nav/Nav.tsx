@@ -7,7 +7,7 @@ import GitHubIcon from "@content/images/github-icon.svg";
 import LinkedinIcon from "@content/images/linkedin-icon.svg";
 import { INavProps } from "./Nav.interfaces";
 
-const Nav = ({ activeNav, handleActiveNav }: INavProps) => {
+const Nav = ({ activeNav, handleActiveNav, setActiveNav }: INavProps) => {
   return (
     <Styled.Container activeNav={activeNav}>
       <Styled.CloseIcon fontSize="large" onClick={handleActiveNav} />
@@ -19,7 +19,16 @@ const Nav = ({ activeNav, handleActiveNav }: INavProps) => {
 
       <Styled.NavLinksContainer>
         {navLinks.map((Item) => (
-          <Styled.NavLinkWrapper key={Item.id}>
+          <Styled.NavLinkWrapper
+            key={Item.id}
+            to={Item.path}
+            activeClass="active-nav"
+            smooth={true}
+            spy={true}
+            offset={-70}
+            duration={500}
+            onClick={() => setActiveNav?.(false)}
+          >
             <Item.icon fontSize="large" />
             <p>{Item.text}</p>
           </Styled.NavLinkWrapper>

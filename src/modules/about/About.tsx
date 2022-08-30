@@ -10,7 +10,7 @@ import Header from "@components/header/Header";
 
 const About = () => {
   return (
-    <Styled.Container>
+    <Styled.Container id="about">
       <Styled.SectionWrapper>
         <Header title="About me" subtitle="Get to know me" />
 

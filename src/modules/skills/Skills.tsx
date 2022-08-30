@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Skills = () => {
   return (
-    <Styled.Container>
+    <Styled.Container id="skills">
       <Styled.SectionWrapper>
         <Header title="My skills" subtitle="See how I work" />
 

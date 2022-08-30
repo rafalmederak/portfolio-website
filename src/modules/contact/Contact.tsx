@@ -68,7 +68,7 @@ const Contact = () => {
   };
 
   return (
-    <Styled.Container>
+    <Styled.Container id="contact">
       <Styled.SectionWrapper>
         <Header title="Contact" subtitle="Let's keep in touch" />
         <p>

@@ -18,7 +18,11 @@ export default function Layout({ children }: IChildrenProps) {
   return (
     <Styled.MainContainer activeNav={activeNav}>
       <Styled.OpenNavButton onClick={handleActiveNav} />
-      <Nav activeNav={activeNav} handleActiveNav={handleActiveNav} />
+      <Nav
+        activeNav={activeNav}
+        handleActiveNav={handleActiveNav}
+        setActiveNav={setActiveNav}
+      />
       <Styled.MainWrapper>
         <main onClick={closeNav}>{children}</main>
         <Footer />

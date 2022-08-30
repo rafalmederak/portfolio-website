@@ -4,7 +4,7 @@ import HeroImage from "@content/images/hero-image.svg";
 
 const Hero = () => {
   return (
-    <Styled.Container>
+    <Styled.Container id="home">
       <Styled.Wrapper>
         <h2>
           Hi,

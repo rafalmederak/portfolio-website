@@ -6,7 +6,7 @@ import { IPosts } from "./Projects.interfaces";
 
 const Projects = ({ posts }: IPosts) => {
   return (
-    <Styled.Container>
+    <Styled.Container id="projects">
       <Styled.SectionWrapper>
         <Header title="My projects" subtitle="The results of my work" />
 

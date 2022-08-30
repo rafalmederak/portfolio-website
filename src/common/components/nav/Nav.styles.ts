@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import { INavProps } from "./Nav.interfaces";
+import { Link } from "react-scroll";
 
 export const Container = styled.nav`
   display: ${({ activeNav }: INavProps) => (activeNav ? "flex" : "none")};
@@ -64,14 +65,18 @@ export const NavLinksContainer = styled.div`
   flex-direction: column;
   margin-top: 5.5rem;
   gap: 1.8rem;
+
+  .active-nav {
+    transition: background-color 0.3s ease;
+    background-color: ${({ theme }) => theme.color.gray100};
+  }
 `;
 
-export const NavLinkWrapper = styled.div`
+export const NavLinkWrapper = styled(Link)`
   display: flex;
   align-items: center;
   width: 18rem;
   height: 3.4rem;
-  /* background-color: ${({ theme }) => theme.color.gray100}; */
   border-radius: 1rem;
   cursor: pointer;
   p {
