@@ -16,6 +16,7 @@ export const Container = styled.nav`
   right: 0;
   background-color: ${({ theme }) => theme.color.white};
   z-index: 1;
+
   ${({ theme }) => theme.screens.lg} {
     width: 28rem;
     right: 0;
@@ -32,16 +33,22 @@ export const Container = styled.nav`
     justify-content: space-between;
   }
 
-  @media screen and (max-height: 720px) {
+  @media screen and (max-height: 700px) {
     width: 34rem;
+    gap: 5rem 0;
     max-height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
   }
+
+  @media screen and (max-height: 700px) and (max-width: 1280px) {
+    flex-direction: row;
+    width: 100%;
+    padding: 2rem 4rem;
+  }
 `;
 
 export const PersonWrapper = styled.div`
-  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,6 +76,10 @@ export const NavLinksContainer = styled.div`
   .active-nav {
     transition: background-color 0.3s ease;
     background-color: ${({ theme }) => theme.color.gray100};
+  }
+
+  @media screen and (max-height: 700px) {
+    margin-top: 0;
   }
 `;
 
@@ -106,12 +117,13 @@ export const SocialMediaContainer = styled.div`
       width: 2.4rem;
     }
   }
-  ${({ theme }) => theme.screens.xxl} {
+
+  ${({ theme }) => theme.screens.xxl + "and (min-height: 900px)"} {
     margin-top: 21rem;
   }
 
-  @media screen and (max-height: 860px) {
-    margin-top: 5.5rem;
+  @media screen and (max-height: 700px) {
+    margin-top: 0;
   }
 `;
 
@@ -122,6 +134,7 @@ export const SocialMediaWrapper = styled.div`
     font-weight: ${({ theme }) => theme.fontWeight.medium};
     margin-left: 1rem;
   }
+
   ${({ theme }) => theme.screens.lg} {
     width: 18rem;
     p {
@@ -136,6 +149,7 @@ export const CloseIcon = styled(HighlightOffIcon)`
   right: 1.5rem;
   cursor: pointer;
   font-size: 28px;
+
   ${({ theme }) => theme.screens.xl} {
     display: none;
   }
