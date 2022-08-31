@@ -57,10 +57,12 @@ export const Wrapper = styled.div`
     color: ${({ theme }) => theme.color.purple};
     font-weight: ${({ theme }) => theme.fontWeight.semibold};
   }
-  button {
+  a {
     margin-top: 1.5rem;
+    text-align: center;
+    cursor: pointer;
     width: 15rem;
-    height: 2.8rem;
+    padding: 0.8rem 0.2rem;
     background-color: ${({ theme }) => theme.color.white};
     border: 1px solid ${({ theme }) => theme.color.gray200};
     font-weight: ${({ theme }) => theme.fontWeight.medium};
@@ -78,10 +80,9 @@ export const Wrapper = styled.div`
     h3 {
       font-size: 3rem;
     }
-    button {
+    a {
       font-size: 1.6rem;
       width: 18rem;
-      height: 4.4rem;
     }
   }
 
@@ -93,10 +94,9 @@ export const Wrapper = styled.div`
     h3 {
       font-size: 4rem;
     }
-    button {
+    a {
       font-size: 2rem;
       width: 24rem;
-      height: 4.4rem;
     }
   }
 `;

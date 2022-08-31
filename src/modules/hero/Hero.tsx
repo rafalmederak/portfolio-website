@@ -1,6 +1,7 @@
 import React from "react";
 import * as Styled from "./Hero.styles";
 import HeroImage from "@content/images/hero-image.svg";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -12,7 +13,9 @@ const Hero = () => {
           I&apos;m Rafał
         </h2>
         <h3>Aspiring React Developer</h3>
-        <button>My projects</button>
+        <Link to="projects" smooth={true} spy={true} duration={500}>
+          My projects
+        </Link>
       </Styled.Wrapper>
       <HeroImage />
     </Styled.Container>
