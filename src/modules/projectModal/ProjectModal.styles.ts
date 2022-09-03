@@ -1,19 +1,20 @@
 import styled from "styled-components";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 
 export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 4rem;
+  padding: 1rem 4rem 3rem 4rem;
 
   ${({ theme }) => theme.screens.md} {
-    padding: 6rem;
+    padding: 3rem 6rem 6rem 6rem;
   }
   ${({ theme }) => theme.screens.xl} {
-    padding: 6rem 10rem;
+    padding: 3rem 10rem 6rem 10rem;
   }
   ${({ theme }) => theme.screens.xxl} {
-    padding: 10rem 20rem 12rem 20rem;
+    padding: 6rem 20rem 12rem 20rem;
   }
 `;
 
@@ -88,4 +89,22 @@ export const GalleryImageWrapper = styled.div`
   ${({ theme }) => theme.screens.lg} {
     height: 32rem;
   }
+`;
+
+export const CloseIconContainer = styled.div`
+  padding: 1.2rem 0.5rem 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: sticky;
+  top: 0;
+
+  ${({ theme }) => theme.screens.md} {
+    padding: 1.5rem 1.5rem 0 0;
+  }
+`;
+
+export const CloseIcon = styled(HighlightOffIcon)`
+  cursor: pointer;
+  font-size: 28px;
 `;

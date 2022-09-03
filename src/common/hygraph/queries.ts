@@ -1,21 +1,8 @@
 import { gql } from "graphql-request";
 
-export const pageQuery = gql`
+export const postsQuery = gql`
   {
     posts {
-      title
-      slug
-      cover {
-        url
-      }
-      shortDescription
-    }
-  }
-`;
-
-export const projectPostQuery = gql`
-  query Post($slug: String!) {
-    post(where: { slug: $slug }) {
       title
       slug
       cover {
@@ -28,14 +15,7 @@ export const projectPostQuery = gql`
       gallery {
         url
       }
-    }
-  }
-`;
-
-export const slugList = gql`
-  {
-    posts {
-      slug
+      shortDescription
     }
   }
 `;

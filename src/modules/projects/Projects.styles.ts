@@ -90,13 +90,14 @@ export const ProjectsDescriptionWrapper = styled.div`
     line-clamp: 4;
     -webkit-box-orient: vertical;
   }
-  a {
+  button {
     color: ${({ theme }) => theme.color.purple};
     background: none;
     border: 1px solid ${({ theme }) => theme.color.purple};
     padding: 0.4rem 1.2rem;
     border-radius: 1rem;
     font-weight: ${({ theme }) => theme.fontWeight.medium};
+    font-size: ${({ theme }) => theme.fontSize.paragraph};
     transition: transform 0.3s ease;
     :hover {
       transform: scale(1.05);
@@ -111,3 +112,5 @@ export const ProjectsDescriptionWrapper = styled.div`
     }
   }
 `;
+
+export const Dialog = styled.div``;

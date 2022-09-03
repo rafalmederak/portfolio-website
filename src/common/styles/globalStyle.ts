@@ -54,6 +54,21 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 20px;
     }
 
+    .MuiDialog-root {
+    margin: 0; 
+    ${({ theme }) => theme.screens.xl} {
+        margin-left: 28rem;
+    }
+    }
+
+    .MuiPaper-root { 
+    margin: 0; 
+    width: 92%;
+    max-width: initial;
+    max-height: initial;
+    height: 94vh;
+    }
+
 `;
 
 export default GlobalStyle;
