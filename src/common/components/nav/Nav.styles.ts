@@ -26,7 +26,6 @@ export const Container = styled.nav`
     display: flex;
     position: sticky;
     top: 0;
-    width: 32rem;
   }
 
   @media screen and (max-height: 860px) {
@@ -34,7 +33,6 @@ export const Container = styled.nav`
   }
 
   @media screen and (max-height: 700px) {
-    width: 34rem;
     gap: 5rem 0;
     max-height: 100%;
     overflow-x: hidden;
