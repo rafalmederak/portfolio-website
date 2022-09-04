@@ -126,6 +126,7 @@ export const SocialMediaContainer = styled.div`
 `;
 
 export const SocialMediaWrapper = styled.div`
+  cursor: pointer;
   display: flex;
   p {
     display: none;

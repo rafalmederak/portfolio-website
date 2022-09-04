@@ -36,11 +36,21 @@ const Nav = ({ activeNav, handleActiveNav, setActiveNav }: INavProps) => {
       </Styled.NavLinksContainer>
 
       <Styled.SocialMediaContainer>
-        <Styled.SocialMediaWrapper>
+        <Styled.SocialMediaWrapper
+          as="a"
+          href="https://www.linkedin.com/in/rafalmederak"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <LinkedinIcon />
           <p>LinkedIn</p>
         </Styled.SocialMediaWrapper>
-        <Styled.SocialMediaWrapper>
+        <Styled.SocialMediaWrapper
+          as="a"
+          href="https://github.com/rafalmederak"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <GitHubIcon />
           <p>GitHub</p>
         </Styled.SocialMediaWrapper>

@@ -122,7 +122,13 @@ const Contact = () => {
           </Styled.FormWrapper>
           <Styled.ContactMethodsWrapper>
             {contactList.map((Item) => (
-              <Styled.ContactMethodBox key={Item.id}>
+              <Styled.ContactMethodBox
+                key={Item.id}
+                as="a"
+                href={Item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Item.icon />
                 <p>{Item.text}</p>
               </Styled.ContactMethodBox>

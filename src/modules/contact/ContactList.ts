@@ -16,12 +16,14 @@ export const contactList = [
   },
   {
     id: 3,
-    icon: GitHubIcon,
-    text: "GitHub",
+    icon: LinkedinIcon,
+    text: "LinkedIn",
+    link: "https://www.linkedin.com/in/rafalmederak",
   },
   {
     id: 4,
-    icon: LinkedinIcon,
-    text: "LinkedIn",
+    icon: GitHubIcon,
+    text: "GitHub",
+    link: "https://github.com/rafalmederak",
   },
 ];
