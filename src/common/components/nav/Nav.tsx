@@ -25,7 +25,6 @@ const Nav = ({ activeNav, handleActiveNav, setActiveNav }: INavProps) => {
             activeClass="active-nav"
             smooth={true}
             spy={true}
-            offset={-70}
             duration={500}
             onClick={() => setActiveNav?.(false)}
           >
