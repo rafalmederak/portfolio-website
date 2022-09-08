@@ -14,18 +14,15 @@ const Skills = () => {
             <h4>How I work?</h4>
             <h3>Skills & Experience</h3>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Obcaecati nobis saepe officia voluptates tempora officiis possimus
-              aliquam asperiores perferendis distinctio voluptatem blanditiis
-              nam nostrum culpa, libero at optio commodi alias iusto
-              perspiciatis quod et iure. Quidem exercitationem placeat id
-              doloremque fuga laborum non debitis impedit neque, deleniti
-              eveniet quia quos eum repellendus dolorum nesciunt commodi,
-              distinctio ad sapiente quo facere, rerum ipsa tempora. Voluptatem
-              nesciunt ut laboriosam nulla deleniti voluptatum dicta, voluptates
-              qui labore, eligendi, sed itaque. Rerum blanditiis exercitationem
-              quam. Minima, voluptas consequuntur! Omnis vel cupiditate
-              laboriosam fugit ea!
+              Since I started creating websites, I’ve done a couple of websites
+              for different companies. I had conversations with clients to
+              ensure the best user experience.
+              <br /> <br /> I create websites that are fast and responsive. My
+              main area of work is the front-end. I create websites using{" "}
+              <b>HTML, CSS, JavaScript</b>, or <b>TypeScript.</b> I also use{" "}
+              <b>React</b>, <b>Redux</b> or <b>Next.js.</b> The CSS
+              pre-processor that I use is <b>Sass</b> or I write CSS with{" "}
+              <b>styled-components</b>.
             </p>
             <button>Download my resume</button>
           </Styled.DescriptionWrapper>

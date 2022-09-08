@@ -42,12 +42,9 @@ const Projects = ({ posts }: IPosts) => {
         <Header title="My projects" subtitle="The results of my work" />
 
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem amet
-          omnis repudiandae repellendus voluptates unde! Voluptatem repudiandae
-          quia, placeat repellat nobis alias. Quis odit deleniti impedit ut
-          nobis eius veniam sequi eveniet voluptatem obcaecati, fuga est
-          suscipit quas eaque itaque nam magni quia. Culpa quas hic praesentium
-          fugiat deleniti voluptatibus?
+          Here are some of the projects I&apos;ve been working on recently, from
+          Web Design to Web development. All of them are on live and on GitHub,
+          so you can check them easily.
         </p>
 
         <Styled.ProjectsContainer>

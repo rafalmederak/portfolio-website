@@ -22,14 +22,17 @@ const About = () => {
               <h4>Who am I</h4>
               <h3>I’m Rafał Męderak, Aspiring React Developer</h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Veritatis architecto nemo temporibus, doloremque magni harum
-                dicta. Adipisci nobis placeat omnis delectus, distinctio quam
-                cum dolore iure quisquam voluptate ducimus aliquam a minus!
-                Veritatis dolor et facere est, praesentium odit cumque quae iure
-                sequi perspiciatis ipsa molestiae, illum ab nesciunt natus
-                itaque incidunt voluptatem. Magni molestias quas exercitationem
-                quibusdam. Magni, sint?
+                I am a website freelancer from Poland, and I study at the Higher
+                School of Economy and IT in Cracow. I have been creating
+                websites as a freelance web developer for the last three years,
+                trying to get better and better. Now, I am looking for my first
+                full-time job. I like solving problems and making things
+                perfect. I also learn new things quickly. I can provide a great
+                approach to every project. I like learning things from more
+                advanced people. This is an opportunity to get experience and
+                work with professionals. I am always open to new challenges and
+                constructive feedback. I want to be a team player and give my
+                skills to help the team and create the best, unique products.
               </p>
             </Styled.PersonDescriptionWrapper>
 
