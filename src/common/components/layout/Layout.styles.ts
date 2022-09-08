@@ -17,8 +17,15 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   main {
-    opacity: ${({ activeNav }: INavProps) => (activeNav ? "0.2" : "1")};
     width: 100%;
+
+    ${({ theme }) => theme.screens.md} {
+      opacity: ${({ activeNav }: INavProps) => (activeNav ? "0.2" : "1")};
+    }
+
+    ${({ theme }) => theme.screens.xl} {
+      opacity: 1;
+    }
   }
   ${({ theme }) => theme.screens.xl} {
     flex-direction: row;

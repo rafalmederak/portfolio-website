@@ -28,7 +28,7 @@ export const Container = styled.nav`
     top: 0;
   }
 
-  @media screen and (max-height: 860px) {
+  @media screen and (max-height: 860px) and (min-width: 768px) {
     justify-content: space-between;
   }
 

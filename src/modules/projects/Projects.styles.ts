@@ -23,6 +23,9 @@ export const SectionWrapper = styled.div`
   align-items: flex-start;
   max-width: 116rem;
   gap: 6rem 0;
+  p {
+    font-weight: ${({ theme }) => theme.fontWeight.medium};
+  }
 `;
 
 export const ProjectsContainer = styled.div`
