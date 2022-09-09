@@ -69,6 +69,13 @@ export const DescriptionWrapper = styled.div`
     border-radius: 1rem;
     font-weight: ${({ theme }) => theme.fontWeight.medium};
     font-size: ${({ theme }) => theme.fontSize.paragraph};
+    transition: all 0.3s ease-out;
+
+    :hover {
+      background: ${({ theme }) => theme.color.purple};
+      color: ${({ theme }) => theme.color.white};
+      transform: translateY(-0.5rem);
+    }
   }
   h4 {
     font-weight: ${({ theme }) => theme.fontWeight.semibold};

@@ -14,7 +14,7 @@ const Hero = () => {
         </h2>
         <h3>Aspiring React Developer</h3>
         <Link to="projects" smooth={true} spy={true} duration={500}>
-          My projects
+          My projects <p>{"->"}</p>
         </Link>
       </Styled.Wrapper>
       <HeroImage />

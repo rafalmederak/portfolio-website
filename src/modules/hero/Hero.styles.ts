@@ -66,6 +66,24 @@ export const Wrapper = styled.div`
     background-color: ${({ theme }) => theme.color.white};
     border: 1px solid ${({ theme }) => theme.color.gray200};
     font-weight: ${({ theme }) => theme.fontWeight.medium};
+    transition: all 0.3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    :hover {
+      background-color: ${({ theme }) => theme.color.purple};
+      color: ${({ theme }) => theme.color.white};
+      transform: translateX(1rem);
+      p {
+        transform: translateX(1rem);
+      }
+    }
+
+    p {
+      margin-left: 1rem;
+      transition: transform 0.3s ease;
+    }
   }
 
   ${({ theme }) => theme.screens.lg} {

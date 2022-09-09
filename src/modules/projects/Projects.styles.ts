@@ -101,9 +101,12 @@ export const ProjectsDescriptionWrapper = styled.div`
     border-radius: 1rem;
     font-weight: ${({ theme }) => theme.fontWeight.medium};
     font-size: ${({ theme }) => theme.fontSize.paragraph};
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease-out;
+
     :hover {
-      transform: scale(1.05);
+      background: ${({ theme }) => theme.color.purple};
+      color: ${({ theme }) => theme.color.white};
+      transform: translateY(-0.5rem);
     }
   }
   ${({ theme }) => theme.screens.xxl} {

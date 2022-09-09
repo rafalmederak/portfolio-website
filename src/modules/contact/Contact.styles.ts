@@ -80,11 +80,14 @@ export const FormWrapper = styled.form`
     padding: 0.4rem 1.2rem;
     border-radius: 1rem;
     font-weight: ${({ theme }) => theme.fontWeight.medium};
-    transition: transform 0.3s ease;
     font-size: ${({ theme }) => theme.fontSize.paragraph};
     width: 20rem;
+    transition: all 0.3s ease-out;
+
     :hover {
-      transform: scale(1.05);
+      background: ${({ theme }) => theme.color.purple};
+      color: ${({ theme }) => theme.color.white};
+      transform: translateY(-0.5rem);
     }
   }
 
