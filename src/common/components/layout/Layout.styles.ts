@@ -18,12 +18,14 @@ export const MainContainer = styled.div`
   flex-direction: column;
   main {
     width: 100%;
+    transition: opacity 0.3s ease;
 
     ${({ theme }) => theme.screens.md} {
       opacity: ${({ activeNav }: INavProps) => (activeNav ? "0.2" : "1")};
     }
 
     ${({ theme }) => theme.screens.xl} {
+      transition: none;
       opacity: 1;
     }
   }

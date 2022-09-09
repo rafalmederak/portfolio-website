@@ -4,7 +4,11 @@ import { INavProps } from "./Nav.interfaces";
 import { Link } from "react-scroll";
 
 export const Container = styled.nav`
-  display: ${({ activeNav }: INavProps) => (activeNav ? "flex" : "none")};
+  opacity: ${({ activeNav }: INavProps) => (activeNav ? "1" : "0")};
+  transform: ${({ activeNav }: INavProps) =>
+    activeNav ? "translateX(0)" : "translateX(100%)"};
+  transition: all 0.4s ease;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -23,8 +27,10 @@ export const Container = styled.nav`
     box-shadow: ${({ theme }) => theme.boxShadow.medium};
   }
   ${({ theme }) => theme.screens.xl} {
-    display: flex;
+    transition: none;
     position: sticky;
+    opacity: 1;
+    transform: none;
     top: 0;
   }
 
