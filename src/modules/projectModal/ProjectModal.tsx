@@ -12,9 +12,6 @@ const ProjectModal = ({ handleClose, ...post }: IProjectModalPost) => {
       <Styled.Container key={post.slug}>
         <Styled.SectionWrapper>
           <Header title={post.title} subtitle="Project" />
-          <Styled.ImageWrapper>
-            <Image priority src={post.cover.url} layout="fill" alt="image" />
-          </Styled.ImageWrapper>
           <Styled.ContentWrapper
             dangerouslySetInnerHTML={{ __html: post.content?.html }}
           ></Styled.ContentWrapper>

@@ -24,6 +24,7 @@ export const SectionWrapper = styled.div`
   align-items: stretch;
   max-width: 116rem;
   gap: 6rem 0;
+  width: 100%;
 `;
 
 export const ImageWrapper = styled.div`
@@ -51,7 +52,6 @@ export const ImageWrapper = styled.div`
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding-bottom: 5rem;
   border-bottom: 1px solid ${({ theme }) => theme.color.gray200};
   gap: 3rem 0;
   img {
