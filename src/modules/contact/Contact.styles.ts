@@ -175,5 +175,6 @@ export const CloseIcon = styled(HighlightOffIcon)`
 `;
 
 export const FailureMessage = styled.p`
+  margin-top: 0.8rem;
   color: red;
 `;

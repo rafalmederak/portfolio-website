@@ -3,68 +3,49 @@ import React, { useState } from "react";
 import * as Styled from "./Contact.styles";
 import { contactList } from "./ContactList";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { useForm } from "react-hook-form";
+
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 const Contact = () => {
-  const [formValues, setFormValues] = useState({
+  const formValues = {
     name: "",
     email: "",
     message: "",
+  };
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<FormData>({
+    defaultValues: formValues,
   });
 
   const [buttonText, setButtonText] = useState("Send message");
   const [successMessage, setSuccessMessage] = useState(false);
-  const [failureMessage, setFailureMessage] = useState(false);
 
-  const changeValues = (
-    e:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) =>
-    setFormValues((values) => ({ ...values, [e.target.name]: e.target.value }));
-
-  const handleValidation = () => {
-    let isValid = true;
-    if (
-      formValues.name.length <= 0 ||
-      formValues.email.length <= 0 ||
-      formValues.message.length <= 0
-    ) {
-      setSuccessMessage(false);
-      setFailureMessage(true);
-      isValid = false;
-    } else {
-      setFailureMessage(false);
-      isValid = true;
+  const onSubmit = async (data: FormData) => {
+    setButtonText("Sending...");
+    try {
+      await fetch("/api/sendgrid", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      setSuccessMessage(true);
+    } catch (error) {
+      console.error(error);
     }
-    return isValid;
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    let isValidForm = handleValidation();
-
-    if (isValidForm) {
-      setButtonText("Sending...");
-      try {
-        await fetch("/api/sendgrid", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formValues),
-        });
-        setFailureMessage(false);
-        setSuccessMessage(true);
-        setFormValues({
-          name: "",
-          email: "",
-          message: "",
-        });
-      } catch (error) {
-        console.error(error);
-      }
-      setButtonText("Send message");
-    }
+    setButtonText("Send message");
+    reset(formValues);
   };
 
   return (
@@ -76,38 +57,59 @@ const Contact = () => {
           you want.
         </p>
         <Styled.FormContainer>
-          <Styled.FormWrapper method="post" onSubmit={handleSubmit}>
-            {failureMessage && (
-              <Styled.FailureMessage>
-                The fields cannot be empty!
-              </Styled.FailureMessage>
-            )}
-            <input
-              type="text"
-              placeholder="Name"
-              name="name"
-              value={formValues.name}
-              required
-              onChange={changeValues}
-              maxLength={50}
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              name="email"
-              value={formValues.email}
-              required
-              onChange={changeValues}
-              maxLength={50}
-            />
-            <textarea
-              placeholder="Message"
-              name="message"
-              value={formValues.message}
-              required
-              onChange={changeValues}
-            />
+          <Styled.FormWrapper method="post" onSubmit={handleSubmit(onSubmit)}>
+            <div>
+              <input
+                {...register("name", {
+                  required: "Name is required",
+                  maxLength: 50,
+                })}
+                placeholder="Name"
+              />
+              {errors.name?.message && (
+                <Styled.FailureMessage>
+                  {errors.name?.message}
+                </Styled.FailureMessage>
+              )}
+            </div>
+
+            <div>
+              <input
+                type="email"
+                placeholder="Email"
+                {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: "Invalid email address",
+                  },
+                  maxLength: 50,
+                })}
+              />
+              {errors.email?.message && (
+                <Styled.FailureMessage>
+                  {errors.email?.message}
+                </Styled.FailureMessage>
+              )}
+            </div>
+
+            <div>
+              <textarea
+                placeholder="Message"
+                {...register("message", {
+                  required: "Message is required",
+                  maxLength: 50,
+                })}
+              />
+              {errors.message?.message && (
+                <Styled.FailureMessage>
+                  {errors.message?.message}
+                </Styled.FailureMessage>
+              )}
+            </div>
+
             <button type="submit">{buttonText}</button>
+
             {successMessage && (
               <Styled.ModalContainer>
                 <Styled.SuccessMessage>
