@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "@styles/theme";
 import { CacheProvider, EmotionCache } from "@emotion/react";
 import createEmotionCache from "src/common/utils/createEmotionCache";
+import Head from "next/head";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -17,12 +18,17 @@ function MyApp({
   emotionCache = clientSideEmotionCache,
 }: IAppProps) {
   return (
-    <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle theme={theme} />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </CacheProvider>
+    <>
+      <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <CacheProvider value={emotionCache}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle theme={theme} />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </CacheProvider>
+    </>
   );
 }
 
