@@ -85,6 +85,7 @@ export const PersonDescriptionWrapper = styled.div`
   }
   p {
     margin-top: 2rem;
+    font-size: ${({ theme }) => theme.fontSize.paragraph};
     font-weight: ${({ theme }) => theme.fontWeight.medium};
     padding-bottom: 2rem;
     border-bottom: 2px solid ${({ theme }) => theme.color.gray200};

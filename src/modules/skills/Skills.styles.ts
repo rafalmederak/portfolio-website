@@ -32,8 +32,13 @@ export const DescriptionContainer = styled.div`
   margin-top: 3.5rem;
   img {
     width: 100%;
-    max-width: 30rem !important;
     object-fit: cover;
+  }
+
+  ${({ theme }) => theme.screens.md} {
+    img {
+      max-width: 30rem !important;
+    }
   }
   ${({ theme }) => theme.screens.lg} {
     flex-direction: row;
@@ -90,6 +95,7 @@ export const DescriptionWrapper = styled.div`
   }
   p {
     margin: 2.8rem 0;
+    font-size: ${({ theme }) => theme.fontSize.paragraph};
     font-weight: ${({ theme }) => theme.fontWeight.medium};
   }
   ${({ theme }) => theme.screens.lg} {

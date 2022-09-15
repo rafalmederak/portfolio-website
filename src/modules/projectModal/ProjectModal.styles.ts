@@ -5,7 +5,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 4rem 3rem 4rem;
+  padding: 1rem 2.4rem 3rem 2.4rem;
 
   ${({ theme }) => theme.screens.md} {
     padding: 3rem 6rem 6rem 6rem;
@@ -98,6 +98,7 @@ export const CloseIconContainer = styled.div`
   align-items: center;
   position: sticky;
   top: 0;
+  z-index: 2;
 
   ${({ theme }) => theme.screens.md} {
     padding: 1.5rem 1.5rem 0 0;
