@@ -11,10 +11,10 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse<Data>) {
   try {
     await sgMail.send({
       to: "rafal.mederak1@gmail.com",
-      from: "rafal.mederak1@gmail.com",
+      from: "portfolio@rafal.mederak.com",
       subject: `${req.body.name} sent you a message`,
       text: `Email => ${req.body.email}`,
-      html: `<p>${req.body.name}<br />${req.body.email}<br />${req.body.message}</p>`,
+      html: `<p><b>Name: </b>${req.body.name}<br /><b>Email: </b>${req.body.email}<br /><b>Message: </b>${req.body.message}</p>`,
     });
 
     res.status(200).json({ success: true });
