@@ -38,18 +38,23 @@ export const Container = styled.nav`
     justify-content: space-between;
   }
 
-  @media screen and (max-height: 650px) {
+  @media screen and (max-height: 680px) {
     gap: 5rem 0;
     max-height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
   }
 
-  @media screen and (max-height: 650px) and (max-width: 1279px) {
+  @media screen and (max-height: 680px) and (max-width: 1279px) {
     flex-direction: row;
     gap: 2rem;
     width: 100%;
     padding: 2rem 4rem;
+  }
+
+  @media screen and (max-height: 680px) and (max-width: 550px) {
+    flex-direction: column;
+    justify-content: space-between;
   }
 `;
 
@@ -58,6 +63,8 @@ export const PersonWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   img {
+    width: 10rem !important;
+    height: 10rem !important;
     object-fit: cover;
     border-radius: 1rem;
     object-position: 50% 20%;
@@ -83,7 +90,7 @@ export const NavLinksContainer = styled.div`
     background-color: ${({ theme }) => theme.color.gray100};
   }
 
-  @media screen and (max-height: 650px) {
+  @media screen and (max-height: 680px) {
     margin-top: 0;
   }
 `;
@@ -127,7 +134,7 @@ export const SocialMediaContainer = styled.div`
     margin-top: 21rem;
   }
 
-  @media screen and (max-height: 650px) {
+  @media screen and (max-height: 680px) {
     margin-top: 0;
   }
 `;

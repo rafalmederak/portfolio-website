@@ -12,7 +12,7 @@ const Nav = ({ activeNav, handleActiveNav, setActiveNav }: INavProps) => {
     <Styled.Container activeNav={activeNav}>
       <Styled.CloseIcon fontSize="large" onClick={handleActiveNav} />
       <Styled.PersonWrapper>
-        <Image src={PersonImage} width={100} height={100} alt="person image" />
+        <Image src={PersonImage} alt="person image" />
         <h3>Rafał Męderak</h3>
         <p>rafal.mederak1@gmail.com</p>
       </Styled.PersonWrapper>
