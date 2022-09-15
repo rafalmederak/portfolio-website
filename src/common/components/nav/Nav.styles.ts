@@ -54,6 +54,10 @@ export const Container = styled.nav`
 
   @media screen and (max-height: 680px) and (max-width: 550px) {
     flex-direction: column;
+    gap: 4rem;
+  }
+
+  @media screen and (max-height: 580px) and (max-width: 550px) {
     justify-content: space-between;
   }
 `;
