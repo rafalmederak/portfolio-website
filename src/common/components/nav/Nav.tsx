@@ -22,6 +22,7 @@ const Nav = ({ activeNav, handleActiveNav, setActiveNav }: INavProps) => {
           <Styled.NavLinkWrapper
             key={Item.id}
             to={Item.path}
+            href={Item.path}
             activeClass="active-nav"
             smooth={true}
             spy={true}

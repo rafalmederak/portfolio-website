@@ -13,7 +13,13 @@ const Hero = () => {
           I&apos;m Rafał
         </h2>
         <h3>Aspiring React Developer</h3>
-        <Link to="projects" smooth={true} spy={true} duration={500}>
+        <Link
+          to="projects"
+          href="projects"
+          smooth={true}
+          spy={true}
+          duration={500}
+        >
           My projects <p>{"->"}</p>
         </Link>
       </Styled.Wrapper>
