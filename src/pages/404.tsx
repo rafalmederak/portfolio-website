@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import NotFoundIcon from "@content/images/404.svg";
+import Link from "next/link";
 
 const StyledNotFound = styled.section`
   display: flex;
@@ -44,7 +45,7 @@ const NotFound = () => {
     <StyledNotFound>
       <NotFoundIcon />
       <p>404</p>
-      <a href="/">Go to the home page</a>
+      <Link href="/">Go to the home page</Link>
     </StyledNotFound>
   );
 };
