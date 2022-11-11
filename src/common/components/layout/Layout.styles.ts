@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { INavProps } from "@components/nav/Nav.interfaces";
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import styled from 'styled-components';
+
+import { INavProps } from '@components/nav/Nav.interfaces';
 
 export const OpenNavButton = styled(MoreVertIcon)`
   position: fixed;
@@ -21,7 +22,7 @@ export const MainContainer = styled.div`
     transition: opacity 0.3s ease;
 
     ${({ theme }) => theme.screens.md} {
-      opacity: ${({ activeNav }: INavProps) => (activeNav ? "0.2" : "1")};
+      opacity: ${({ activeNav }: INavProps) => (activeNav ? '0.2' : '1')};
     }
 
     ${({ theme }) => theme.screens.xl} {

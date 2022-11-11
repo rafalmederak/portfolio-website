@@ -1,14 +1,19 @@
-import Header from "@components/header/Header";
-import * as Styled from "./Projects.styles";
-import Image from "next/image";
-import { IPost, IPosts } from "./Projects.interfaces";
-import { useEffect, useRef, useState } from "react";
-import Dialog, { DialogProps } from "@mui/material/Dialog";
-import ProjectModal from "@modules/projectModal/ProjectModal";
+import { useEffect, useRef, useState } from 'react';
+
+import Image from 'next/image';
+
+import Dialog, { DialogProps } from '@mui/material/Dialog';
+
+import ProjectModal from '@modules/projectModal/ProjectModal';
+
+import Header from '@components/header/Header';
+
+import { IPost, IPosts } from './Projects.interfaces';
+import * as Styled from './Projects.styles';
 
 const Projects = ({ posts }: IPosts) => {
   const [open, setOpen] = useState(false);
-  const [scroll, setScroll] = useState<DialogProps["scroll"]>("paper");
+  const [scroll, setScroll] = useState<DialogProps['scroll']>('paper');
   const [popupContent, setPopupContent] = useState<[IPost] | []>([]);
 
   const changeContent = (post: IPost) => {
@@ -16,7 +21,7 @@ const Projects = ({ posts }: IPosts) => {
   };
 
   const handleClickOpen =
-    (scrollType: DialogProps["scroll"], post: IPost) => () => {
+    (scrollType: DialogProps['scroll'], post: IPost) => () => {
       setOpen(true);
       setScroll(scrollType);
       changeContent(post);
@@ -60,7 +65,7 @@ const Projects = ({ posts }: IPosts) => {
               <Styled.ProjectsDescriptionWrapper>
                 <h2>{post.title}</h2>
                 <p>{post.shortDescription}</p>
-                <button onClick={handleClickOpen("paper", post)}>
+                <button onClick={handleClickOpen('paper', post)}>
                   More information
                 </button>
               </Styled.ProjectsDescriptionWrapper>

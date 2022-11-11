@@ -1,7 +1,9 @@
-import React from "react";
-import * as Styled from "./Hero.styles";
-import HeroImage from "@content/images/hero-image.svg";
-import { Link } from "react-scroll";
+import React from 'react';
+import { Link } from 'react-scroll';
+
+import HeroImage from '@content/images/hero-image.svg';
+
+import * as Styled from './Hero.styles';
 
 const Hero = () => {
   return (
@@ -20,7 +22,7 @@ const Hero = () => {
           spy={true}
           duration={500}
         >
-          My projects <p>{"->"}</p>
+          My projects <p>{'->'}</p>
         </Link>
       </Styled.Wrapper>
       <HeroImage />

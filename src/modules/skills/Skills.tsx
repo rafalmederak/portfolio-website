@@ -1,7 +1,10 @@
-import Header from "@components/header/Header";
-import * as Styled from "./Skills.styles";
-import SkillsImage from "@content/images/skills-image.png";
-import Image from "next/image";
+import Image from 'next/image';
+
+import Header from '@components/header/Header';
+
+import SkillsImage from '@content/images/skills-image.png';
+
+import * as Styled from './Skills.styles';
 
 const Skills = () => {
   return (
@@ -18,10 +21,10 @@ const Skills = () => {
               for different companies. I had conversations with clients to
               ensure the best user experience.
               <br /> <br /> I create websites that are fast and responsive. My
-              main area of work is the front-end. I create websites using{" "}
-              <b>HTML, CSS, JavaScript</b>, or <b>TypeScript.</b> I also use{" "}
+              main area of work is the front-end. I create websites using{' '}
+              <b>HTML, CSS, JavaScript</b>, or <b>TypeScript.</b> I also use{' '}
               <b>React</b>, <b>Redux</b> or <b>Next.js.</b> The CSS
-              pre-processor that I use is <b>Sass</b> or I write CSS with{" "}
+              pre-processor that I use is <b>Sass</b> or I write CSS with{' '}
               <b>styled-components</b>.
             </p>
             <button>Download my resume</button>

@@ -1,12 +1,14 @@
-import styled from "styled-components";
-import HighlightOffIcon from "@mui/icons-material/HighlightOff";
-import { INavProps } from "./Nav.interfaces";
-import { Link } from "react-scroll";
+import { Link } from 'react-scroll';
+
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import styled from 'styled-components';
+
+import { INavProps } from './Nav.interfaces';
 
 export const Container = styled.nav`
-  opacity: ${({ activeNav }: INavProps) => (activeNav ? "1" : "0")};
+  opacity: ${({ activeNav }: INavProps) => (activeNav ? '1' : '0')};
   transform: ${({ activeNav }: INavProps) =>
-    activeNav ? "translateX(0)" : "translateX(100%)"};
+    activeNav ? 'translateX(0)' : 'translateX(100%)'};
   transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
@@ -134,7 +136,7 @@ export const SocialMediaContainer = styled.div`
     }
   }
 
-  ${({ theme }) => theme.screens.xxl + "and (min-height: 900px)"} {
+  ${({ theme }) => theme.screens.xxl + 'and (min-height: 900px)'} {
     margin-top: 21rem;
   }
 

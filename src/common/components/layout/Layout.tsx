@@ -1,8 +1,10 @@
-import Nav from "@components/nav/Nav";
-import { IChildrenProps } from "./Layout.interfaces";
-import * as Styled from "./Layout.styles";
-import { useState } from "react";
-import Footer from "@components/footer/Footer";
+import { useState } from 'react';
+
+import Footer from '@components/footer/Footer';
+import Nav from '@components/nav/Nav';
+
+import { IChildrenProps } from './Layout.interfaces';
+import * as Styled from './Layout.styles';
 
 export default function Layout({ children }: IChildrenProps) {
   const [activeNav, setActiveNav] = useState(false);

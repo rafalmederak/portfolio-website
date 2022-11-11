@@ -1,6 +1,7 @@
-import React from "react";
-import * as Styled from "./Header.styles";
-import { IHeaderProps } from "./Header.interfaces";
+import React from 'react';
+
+import { IHeaderProps } from './Header.interfaces';
+import * as Styled from './Header.styles';
 
 const Header = ({ title, subtitle }: IHeaderProps) => {
   return (

@@ -1,15 +1,15 @@
 import Document, {
   DocumentContext,
-  Html,
   Head,
+  Html,
   Main,
   NextScript,
-} from "next/document";
+} from 'next/document';
 
-import { ServerStyleSheet } from "styled-components";
+import createEmotionServer from '@emotion/server/create-instance';
+import { ServerStyleSheet } from 'styled-components';
 
-import createEmotionServer from "@emotion/server/create-instance";
-import createEmotionCache from "../common/utils/createEmotionCache";
+import createEmotionCache from '../common/utils/createEmotionCache';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -31,7 +31,7 @@ export default class MyDocument extends Document {
       const emotionStyles = extractCriticalToChunks(initialProps.html);
       const emotionStyleTags = emotionStyles.styles.map((style) => (
         <style
-          data-emotion={`${style.key} ${style.ids.join(" ")}`}
+          data-emotion={`${style.key} ${style.ids.join(' ')}`}
           key={style.key}
           dangerouslySetInnerHTML={{ __html: style.css }}
         />

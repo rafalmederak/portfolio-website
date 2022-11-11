@@ -1,14 +1,16 @@
-import Layout from "@components/layout/Layout";
-import Hero from "@modules/hero/Hero";
-import About from "@modules/about/About";
-import Skills from "@modules/skills/Skills";
-import Projects from "@modules/projects/Projects";
-import Contact from "@modules/contact/Contact";
+import Head from 'next/head';
 
-import { hygraphClient } from "src/common/hygraph/client";
-import { postsQuery } from "src/common/hygraph/queries";
-import Head from "next/head";
-import { IPosts } from "@modules/projects/Projects.interfaces";
+import { hygraphClient } from 'src/common/hygraph/client';
+import { postsQuery } from 'src/common/hygraph/queries';
+
+import About from '@modules/about/About';
+import Contact from '@modules/contact/Contact';
+import Hero from '@modules/hero/Hero';
+import Projects from '@modules/projects/Projects';
+import { IPosts } from '@modules/projects/Projects.interfaces';
+import Skills from '@modules/skills/Skills';
+
+import Layout from '@components/layout/Layout';
 
 const Home = ({ posts }: IPosts) => {
   return (

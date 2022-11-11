@@ -1,12 +1,17 @@
-import React from "react";
-import * as Styled from "./About.styles";
-import Image from "next/image";
-import PersonImage from "@content/images/person-image.png";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import PhoneIcon from "@mui/icons-material/Phone";
-import Header from "@components/header/Header";
+import React from 'react';
+
+import Image from 'next/image';
+
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import PhoneIcon from '@mui/icons-material/Phone';
+
+import Header from '@components/header/Header';
+
+import PersonImage from '@content/images/person-image.png';
+
+import * as Styled from './About.styles';
 
 const About = () => {
   return (

@@ -1,7 +1,9 @@
-import Header from "@components/header/Header";
-import * as Styled from "./ProjectModal.styles";
-import Image from "next/image";
-import { IProjectModalPost } from "./ProjectModal.interfaces";
+import Image from 'next/image';
+
+import Header from '@components/header/Header';
+
+import { IProjectModalPost } from './ProjectModal.interfaces';
+import * as Styled from './ProjectModal.styles';
 
 const ProjectModal = ({ handleClose, ...post }: IProjectModalPost) => {
   return (

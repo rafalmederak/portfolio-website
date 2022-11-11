@@ -1,10 +1,12 @@
-import type { AppProps } from "next/app";
-import GlobalStyle from "@styles/globalStyle";
-import { ThemeProvider } from "styled-components";
-import { theme } from "@styles/theme";
-import { CacheProvider, EmotionCache } from "@emotion/react";
-import createEmotionCache from "src/common/utils/createEmotionCache";
-import Head from "next/head";
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+
+import { CacheProvider, EmotionCache } from '@emotion/react';
+import createEmotionCache from 'src/common/utils/createEmotionCache';
+import { ThemeProvider } from 'styled-components';
+
+import GlobalStyle from '@styles/globalStyle';
+import { theme } from '@styles/theme';
 
 const clientSideEmotionCache = createEmotionCache();
 

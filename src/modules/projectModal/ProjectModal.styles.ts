@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import HighlightOffIcon from "@mui/icons-material/HighlightOff";
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import styled from 'styled-components';
 
 export const Container = styled.section`
   display: flex;

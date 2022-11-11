@@ -1,9 +1,12 @@
-import Header from "@components/header/Header";
-import React, { useState } from "react";
-import * as Styled from "./Contact.styles";
-import { contactList } from "./ContactList";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { useForm } from "react-hook-form";
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+import Header from '@components/header/Header';
+
+import * as Styled from './Contact.styles';
+import { contactList } from './ContactList';
 
 type FormData = {
   name: string;
@@ -13,9 +16,9 @@ type FormData = {
 
 const Contact = () => {
   const formValues = {
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   };
 
   const {
@@ -27,16 +30,16 @@ const Contact = () => {
     defaultValues: formValues,
   });
 
-  const [buttonText, setButtonText] = useState("Send message");
+  const [buttonText, setButtonText] = useState('Send message');
   const [successMessage, setSuccessMessage] = useState(false);
 
   const onSubmit = async (data: FormData) => {
-    setButtonText("Sending...");
+    setButtonText('Sending...');
     try {
-      await fetch("/api/sendgrid", {
-        method: "POST",
+      await fetch('/api/sendgrid', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });
@@ -44,7 +47,7 @@ const Contact = () => {
     } catch (error) {
       console.error(error);
     }
-    setButtonText("Send message");
+    setButtonText('Send message');
     reset(formValues);
   };
 
@@ -60,8 +63,8 @@ const Contact = () => {
           <Styled.FormWrapper method="post" onSubmit={handleSubmit(onSubmit)}>
             <div>
               <input
-                {...register("name", {
-                  required: "Name is required",
+                {...register('name', {
+                  required: 'Name is required',
                   maxLength: 50,
                 })}
                 placeholder="Name"
@@ -77,11 +80,11 @@ const Contact = () => {
               <input
                 type="email"
                 placeholder="Email"
-                {...register("email", {
-                  required: "Email is required",
+                {...register('email', {
+                  required: 'Email is required',
                   pattern: {
                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: "Invalid email address",
+                    message: 'Invalid email address',
                   },
                   maxLength: 50,
                 })}
@@ -96,8 +99,8 @@ const Contact = () => {
             <div>
               <textarea
                 placeholder="Message"
-                {...register("message", {
-                  required: "Message is required",
+                {...register('message', {
+                  required: 'Message is required',
                   maxLength: 50,
                 })}
               />

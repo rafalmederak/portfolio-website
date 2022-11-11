@@ -1,11 +1,14 @@
-import Image from "next/image";
-import React from "react";
-import * as Styled from "./Nav.styles";
-import PersonImage from "@content/images/person-image.png";
-import { navLinks } from "./NavLinks";
-import GitHubIcon from "@content/images/github-icon.svg";
-import LinkedinIcon from "@content/images/linkedin-icon.svg";
-import { INavProps } from "./Nav.interfaces";
+import React from 'react';
+
+import Image from 'next/image';
+
+import GitHubIcon from '@content/images/github-icon.svg';
+import LinkedinIcon from '@content/images/linkedin-icon.svg';
+import PersonImage from '@content/images/person-image.png';
+
+import { INavProps } from './Nav.interfaces';
+import * as Styled from './Nav.styles';
+import { navLinks } from './NavLinks';
 
 const Nav = ({ activeNav, handleActiveNav, setActiveNav }: INavProps) => {
   return (
