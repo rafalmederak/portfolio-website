@@ -27,7 +27,9 @@ const Skills = () => {
               pre-processor that I use is <b>Sass</b> or I write CSS with{' '}
               <b>styled-components</b>.
             </p>
-            <button>Download my resume</button>
+            <a href="/files/CV-Rafal_Mederak.pdf" download>
+              Download my resume
+            </a>
           </Styled.DescriptionWrapper>
 
           <Image src={SkillsImage} alt="person-image" />

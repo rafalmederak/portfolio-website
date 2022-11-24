@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.section`
   display: flex;
@@ -65,7 +65,7 @@ export const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  button {
+  a {
     color: ${({ theme }) => theme.color.purple};
     background: none;
     border: 1px solid ${({ theme }) => theme.color.purple};
