@@ -8,6 +8,8 @@ export const Container = styled.section`
   align-items: flex-start;
   padding: 3rem 4rem;
   border-top: 1px solid ${({ theme }) => theme.color.gray200};
+  min-height: calc(100vh - 12rem);
+  justify-content: center;
 
   ${({ theme }) => theme.screens.md} {
     padding: 6rem;

@@ -7,10 +7,10 @@ export const Container = styled.footer`
   width: 100%;
   padding: 4rem;
   border-top: 1px solid ${({ theme }) => theme.color.gray200};
+  height: 12rem;
 
   ${({ theme }) => theme.screens.md} {
     padding: 0rem 6rem;
-    height: 12rem;
   }
   ${({ theme }) => theme.screens.xl} {
     padding: 0rem 10rem;
